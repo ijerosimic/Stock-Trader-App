@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container">
+    <br>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-12">
+        <app-navbar></app-navbar>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-12">
+        <router-view></router-view>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Bootstrap from "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import SweetAlert from "../node_modules/vue-sweetalert2";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import Portfolio from "./components/Portfolio";
+import Stocks from "./components/Stocks";
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    appNavbar: NavBar
+  },
+  created() {
+    this.$store.dispatch("getFundsFromApi");
+    this.$store.dispatch("getStocksFromApi");
+    this.$store.dispatch("getPortfolio");
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
