@@ -1,4 +1,7 @@
 # stock_trader_app
+```
+simple app for buying and selling stocks. the app is connected to firebase database.
+```
 
 ## Project setup
 ```
