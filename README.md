@@ -1,6 +1,6 @@
 # stock_trader_app
 ```
-simple app for buying and selling stocks. data is stored in firebase.
+End project for the Udemy Vue.js course. A simple app for buying and selling stocks. The data is stored in Firebase.
 ```
 
 ## Project setup
