@@ -1,5 +1,3 @@
-# stock_trader_app
-
 ## Project setup
 ```
 npm install
